@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "MyTool is now running!"
+mytool/
+├── DEBIAN/
+│   └── control
+└── usr/
+    └── local/
+        └── bin/
+            └── mytool.sh
+            Package: mytool
+Version: 1.0
+Architecture: all
+Maintainer: dog643363@gmail.com
+Description: A simple tool that prints a message.
+cd /caminho/para/mytool
+dpkg-deb --build mytool
+dpkg -i mytool.deb
+pkg install mytool

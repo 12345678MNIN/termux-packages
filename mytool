@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "MyTool is now running!"
+mytool/
+├── DEBIAN/
+│   └── control
+└── usr/
+    └── local/
+        └── bin/
+            └── mytool.sh
+            cd /caminho/para/mytool
+            dpkg-deb --build mytool
+            dpkg -i mytool.deb
+            pkg install mytool
+            
